@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>eb bill calculator</h1>
+    <input type="number" id="field">
+    <button id="btn">click</button>
+</body>
+
+<script>
+
+    
+    document.getElementById("btn").addEventListener("click",handleclick)
+    
+    function handleclick(){
+    let price = document.getElementById("field").value;
+    price=Number(price)
+
+    console.log( typeof(price))
+
+    if(price<50){
+        let firsthalf = price*0.75;
+        console.log(firsthalf)
+    }else 
+    if(price<=100){
+        let secondhalf1= price-50
+        let first = 50*0.75
+        let secondhalf = secondhalf1+first
+        console.log(secondhalf)
+    }else if(price<=300){
+        let secondhalf1= (price-100)*1.50
+        let first = 50*0.75
+        let second = 50
+
+        let secondhalf = secondhalf1+first+second
+        console.log(secondhalf)
+    } 
+    }
+
+</script>
+</html>
